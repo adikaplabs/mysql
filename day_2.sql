@@ -107,4 +107,4 @@ WHERE sal < comm;
 -- 24. Write a query in SQL to list the employees who have joined in the year
 -- 1991.
 -- 25. Write a query in SQL to list the name, id, hire_date, and salary of all the
--- employees joined before 1 apr 91. 
+-- employees joined before 1 apr 91..
