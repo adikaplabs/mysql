@@ -79,7 +79,7 @@ WHERE job = 'ANALYST';
 
 SELECT * 
 FROM emp
-WHERE ename = 'KINGG';
+WHERE ename = 'KING';
 
 -- 15. Write a query in SQL to display all the details of the employees whose
 -- commission is more than their salary.
