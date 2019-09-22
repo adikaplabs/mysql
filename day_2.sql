@@ -90,16 +90,48 @@ WHERE sal < comm;
 
 -- 16. Write a query in SQL to list the employees whose salary is more than
 -- 3000 after giving 25% increment.
--- 17. Write a query in SQL to list the name of the employees, those having six
--- characters to their name.
+
+SELECT ename, floor(sal*1.25) "Incremented Salary"
+FROM emp
+WHERE (sal*1.25) > 3000;
+
+-- 17. Write a query in SQL to list the name of the employees, those having six characters to their name.
+
+SELECT ename
+FROM emp
+WHERE length(replace(ename, " " ,'')) = 6;
+
 -- 18. Write a query in SQL to list the employees who joined in the month
 -- January.
+
+SELECT * FROM emp;
+
+SELECT ename, MONTH(hiredate)
+FROM emp
+WHERE MONTH(hiredate) = 1;
+
 -- 19. Write a query in SQL to list the name of employees and their manager
 -- separated by the string 'works for'.
+
+SELECT CONCAT(ename, " works for ", mgr )  "Employee and Manager"
+FROM emp;
+
+SELECT concat(a.ename, " works with  ", b.ename) "Who's WHO"
+FROM emp a JOIN emp b
+ON a.mgr = b.empno;
+
 -- 20. Write a query in SQL to list all the employees whose designation is
 -- CLERK.
+
+SELECT *
+FROM emp
+WHERE job = 'CLERK';
+
 -- 21. Write a query in SQL to list the employees whose experience is more than
 -- 10 years. 
+
+
+
 -- 22. Write a query in SQL to list the employees whose salaries are less than
 -- 3500.
 -- 23. Write a query in SQL to list the name, job_name, and salary of any
@@ -108,3 +140,4 @@ WHERE sal < comm;
 -- 1991.
 -- 25. Write a query in SQL to list the name, id, hire_date, and salary of all the
 -- employees joined before 1 apr 91..
+
